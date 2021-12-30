@@ -1,0 +1,167 @@
+Q.For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+code:
+
+var obj=[
+    {
+        person:"Name1",
+        age:20,
+        company:"Guvi",
+    },
+    {
+        person:"Name2",
+        age:30,
+        company:"Guvi geek",  
+    },
+    {
+        person:"Name3",
+        age:40,
+        company:"Guvi geek network",  
+    },
+];
+
+//normal for loop
+for(var i=0;i<=obj.length;i++){
+  console.log(obj[i]);
+};
+
+//forEach loop
+obj.forEach((data) => {
+  console.log(`
+     ${data.person}
+     ${data.age}
+     ${data.company}
+      `);
+});
+
+//for in loop
+for(var key in obj){
+ console.log(`
+ ${obj[key].person}
+ ${obj[key].age}
+ ${obj[key].company}
+ `);
+}
+
+//for of loop
+for(var i of obj){
+ console.log(`
+  ${i.company}
+  ${i.person}
+  ${i.age}
+    `);
+}
+
+output:
+//normal for loop
+{ person: 'Name1', age: 20, company: 'Guvi' }
+{ person: 'Name2', age: 30, company: 'Guvi geek' }
+{ person: 'Name3', age: 40, company: 'Guvi geek network' }
+
+//forEach loop
+     Name1
+     20
+     Guvi
+
+
+     Name2
+     30
+     Guvi geek
+
+
+     Name3
+     40
+     Guvi geek network
+
+//for in loop
+ Name1
+ 20
+ Guvi
+
+
+ Name2
+ 30
+ Guvi geek
+
+
+ Name3
+ 40
+ Guvi geek network
+
+//for of loop
+  Guvi
+  Name1
+  20
+
+
+  Guvi geek
+  Name2
+  30
+
+
+  Guvi geek network
+  Name3
+  40
+
+Q.Create your own resume data in JSON format
+
+code:
+
+let myResume={
+    "basics": {
+      "name": "Jhon",
+      "age":25,
+      "email": "jhon@gamil.com",
+      "phone": 9876543211,
+      "address": {
+        "city": "Chennai",
+        "state": "Tamilnadu",
+        "country": "India"
+      },
+    },
+    "education": [
+      {
+        institution: "APJ College Of Engineering",
+        department: "CSE",
+        studyType: "fulltime",
+        year: "2015-2019",
+        gpa: 7.5,
+      }
+    ],
+    "skills": [
+      {
+        "language": "python,javascript",
+        "level": "beginer",
+      }
+    ],
+    "languages": [
+      {
+        "language": "Tamil,Enlish",
+      }
+    ],
+  }
+  console.log(myResume);
+
+Output:
+
+{
+  basics: {
+    name: 'Jhon',
+    age: 25,
+    email: 'jhon@gamil.com',
+    phone: 9876543211,
+    address: { city: 'Chennai', state: 'Tamilnadu', country: 'India' }     
+  },
+  education: [
+    {
+      institution: 'APJ College Of Engineering',
+      department: 'CSE',
+      studyType: 'fulltime',
+      year: '2015-2019',
+      gpa: 7.5
+    }
+  ],
+  skills: [ { language: 'python,javascript', level: 'beginer' } ],
+  languages: [ { language: 'Tamil,Enlish' } ]
+}
+
